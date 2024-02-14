@@ -27,3 +27,4 @@ Cette structure est bien organisée et extensible. Elle assure également la mod
 Pour lancer le projet, nous avons besoin d'avoir le conteneur de la base de données, nous devons lancer cette commande :
 * npm install
 * npm start
+## Utilisation de Postman pour tester l'API
