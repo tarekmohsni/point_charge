@@ -20,9 +20,18 @@ class PointChargeBo {
                     message: "Le type d'emplacement doit être 'domicile' ou 'bureaux'." });
             }
 
-            const point_charge_id = generateIdPointCharge();
+            let point_charge_id: string | null = null;
+
+            while (!point_charge_id) {
+                const currentId:string = generateIdPointCharge();
+                const existingPoint = await models.point_charge.findOne({ where: { point_charge_id: currentId } });
+                if (!existingPoint) {
+                    point_charge_id = currentId;
+                }
+            }
 
             const newChargingPoint = await models.point_charge.create({ point_charge_id, nom, type_emplacement });
+
             res.status(200).json({
                 success: true,
                 data: newChargingPoint,
