@@ -16,7 +16,7 @@ On a implémenté un appel API pour créer un point de charge
 On a choisi la structure suivante:
 * objet_métier: définisse la logique métier
 * controller: responsable de la gestion des requêtes et des réponses HTTP
-* helper: contient les fonction réutilisables
+* helper: contient les fonctions réutilisables
 * model: présente les entités
 * route: définisse les endpoints
 * config: contient les fichiers de configuration
